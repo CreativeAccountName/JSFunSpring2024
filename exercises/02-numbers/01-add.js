@@ -4,3 +4,5 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const sum = 7 + 8;
+console.log(sum);

@@ -4,3 +4,5 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let myNumber = 42;
+console.log(myNumber);
