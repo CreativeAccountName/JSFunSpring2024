@@ -57,9 +57,9 @@
           // I can see "isLoggedIn" from here.
 
           // Change the line below so that it only executes if "isLoggedIn" is true
-          document.querySelector("#message").textContent = "Welcome back!";
+          if(isLoggedIn){document.querySelector("#message").textContent = "Welcome back!";}
           // Change this line below so that it only executes if "isLoggedIn" is false
-          document.querySelector("#message").textContent = "Please login";
+          if(!isLoggedIn){document.querySelector("#message").textContent = "Please login";}
         };
 
         // Do not change anything below
