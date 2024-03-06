@@ -10,3 +10,7 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const countNumberOfDigits = (num) => {return num.toString().length;};
+
+let number = countNumberOfDigits(500);
+console.log(number);
