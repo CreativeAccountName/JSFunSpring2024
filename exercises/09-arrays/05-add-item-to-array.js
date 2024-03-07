@@ -5,3 +5,5 @@ let languages = ["C++"]; // Do not change this line
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+languages.push("Assembly","Java","Perl");
+console.log(languages);
