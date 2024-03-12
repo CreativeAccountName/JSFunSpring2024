@@ -68,7 +68,12 @@
         // Right now, this only adds the first person in the "results" array to the table.
         // Create a loop here and use this function within the loop
         // to add every person's name to the table.
-        addToTable(1, results[0]); // Change me. This should be inside your loop.
+
+        // Uses a for of loop for shorthand and clarity.
+        for (let position of results){
+        
+        addToTable((results.indexOf(position) + 1), position); // Each time the loop is executed, the index of the current item is offset by +1 and recorded to the table, and the string in the actual position in the array is recorded. This ensures 1st place isn't expressed as 0th place, yet the first item in the array is n't skipped over.
+        }
       })();
     </script>
   </body>

@@ -10,3 +10,4 @@ const array = ["Honda", "Ford", "Ferrari"];
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+for (let make of array) {console.log(make);} // Outputs the current index item of the array to the console, then iterates.

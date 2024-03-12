@@ -6,3 +6,7 @@ let planets = ["Pluto", "Saturn", "Mar"]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+// Uses .length to get the number of items in the array and stores them in the length variable.
+let length = planets.length;
+console.log(length);

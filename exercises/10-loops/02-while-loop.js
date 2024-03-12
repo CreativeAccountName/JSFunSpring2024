@@ -8,3 +8,10 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+// Adds 10 each time it loops, and stops when it reaches the target value.
+let i = 0;
+while (i < 100) {
+  i += 10;
+  console.log(i);
+}
