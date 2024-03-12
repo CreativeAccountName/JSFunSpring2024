@@ -6,7 +6,7 @@ import {
   getPositionInArray,
   addItemToArray,
   combineArrays,
-} from "./arrays-sets-test-helper.js";
+} from "./arrays-helper.js";
 
 describe("Arrays", () => {
   describe("01-create-an-array", () => {
@@ -21,7 +21,7 @@ describe("Arrays", () => {
   });
 
   describe("02-accessing-an-item", () => {
-    it('should contain an array called "myCar"', () => {
+    it('should contain a let or variable called "myCar"', () => {
       const accessingAnItemStr = accessingAnItem.toString();
       expect(accessingAnItemStr).to.match(/(const)|(let)/);
       expect(accessingAnItemStr).to.match(/myCar/);
