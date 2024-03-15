@@ -60,7 +60,9 @@
          * The code below should go inside the loop.
          * Change the code below so that it will work for the other movies too.
          */
-        let movie = movies["halloween-ends"];
+        for (let listItem in movies)  {
+
+        let movie = movies[listItem];
         const htmlString = `<li class="list-group-item d-flex justify-content-between align-items-start">
           <div class="ms-2 me-auto">
             <div class="fw-bold">${movie.title}</div>
@@ -68,6 +70,7 @@
           </div>
         </li>`;
         list.insertAdjacentHTML("beforeend", htmlString);
+       }
 
         // Do not change anything below this line.
       })();

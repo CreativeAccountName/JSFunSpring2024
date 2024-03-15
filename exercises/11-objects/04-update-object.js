@@ -15,3 +15,8 @@ let student = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+student.name = "Brendan";
+student.skills.push("CSS");
+
+console.log(student.name);
+console.log(student.skills);

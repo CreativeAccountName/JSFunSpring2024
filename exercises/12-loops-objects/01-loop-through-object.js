@@ -17,3 +17,8 @@ const links = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let html = "";
+for (const [key, value] of Object.entries(links)){
+  html += (`<a href="${value}">${key}</a>`);
+  console.log(html);
+}

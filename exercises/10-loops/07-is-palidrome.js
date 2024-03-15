@@ -11,7 +11,7 @@ let string = "racecar";
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-let isPalindrome = false;
+let isPalindrome = false; // Creating a boolean value named isPalindrome to set based on the results of the comparison of two strings.
 
 const stringArray = string.split(""); // Creating a new array using the .split() method.
 const stringReversedArray = stringArray.toReversed(); // Creating a reversed copy of stringArray with the .toReversed() method, since .reverse alters the original.
