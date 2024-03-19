@@ -17,3 +17,5 @@ isEvenOrOdd = num % 2 === 0
 : isEvenOrOdd = "odd";
 
 console.log(isEvenOrOdd);
+
+// let isEvenOrOdd = num % 2 === 0 ? "even" : "odd";  // FAR BETTER way to do this. Thanks, Chelsea M.!
