@@ -11,3 +11,9 @@ let num = 8; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let isEvenOrOdd;
+isEvenOrOdd = num % 2 === 0
+? isEvenOrOdd = "even"
+: isEvenOrOdd = "odd";
+
+console.log(isEvenOrOdd);
