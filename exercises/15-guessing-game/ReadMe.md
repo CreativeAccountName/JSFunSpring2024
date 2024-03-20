@@ -10,12 +10,18 @@ Create a simple command-line "Guess the Number" game where the computer selects 
 
 ```bash
 cd exercises/15-guessing-game
-npm init -y
-npm install readline-sync
+npm install
 ```
 
 2. Create Project Files
    Create an `index.js` This will be where you write the game logic.
+
+```js
+// exercises/15-guessing-game/index.js
+import prompt from "readline-sync";
+
+// Write the code for your game here
+```
 
 ## Game Development Instructions
 
