@@ -33,3 +33,23 @@ console.log(createCallToAction("Book Now"));
 // IGNORE THIS BELOW. It is for the tests.
 
 export { createCallToAction };
+
+
+
+/*// CHANGE SOMETHING WITH THE FUNCTION DECLARATION
+const createCallToAction = (text, callback) => {
+  // CHANGE SOMETHING INSIDE THIS FUNCTION
+  return callback(
+    "<div>Limited Time: Members Save 30%<br>" +
+    text +
+    "</div>"
+  );
+};
+
+// CHANGE SOMETHING HERE TOO so that creates a link
+console.log(createCallToAction("Book now", createLink));
+
+// IGNORE THIS BELOW. It is for the tests.
+
+export { createCallToAction };
+*/

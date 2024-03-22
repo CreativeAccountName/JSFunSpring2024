@@ -42,6 +42,7 @@ const isNumberTwoDigits = (num) => {
 
 const findFirst = (arrayOfNum, callback) => {
   // WRITE YOUR ANSWER IN HERE
+  return callback(/* ... */);
 };
 
 /**
