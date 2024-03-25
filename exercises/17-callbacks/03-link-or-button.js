@@ -18,38 +18,14 @@ const createButton = (text) => {
  */
 
 // CHANGE SOMETHING WITH THE FUNCTION DECLARATION
-const createCallToAction = (clickableText) => {
-  // CHANGE SOMETHING INSIDE THIS FUNCTION
-  return (
-    "<div>Limited Time: Members Save 30%<br>" +
-    createLink(clickableText) +
-    "</div>"
-  );
-};
-
-// CHANGE SOMETHING HERE TOO so that creates a link
-console.log(createCallToAction("Book Now"));
-
-// IGNORE THIS BELOW. It is for the tests.
-
-export { createCallToAction };
-
-
-
-/*// CHANGE SOMETHING WITH THE FUNCTION DECLARATION
 const createCallToAction = (text, callback) => {
   // CHANGE SOMETHING INSIDE THIS FUNCTION
-  return callback(
-    "<div>Limited Time: Members Save 30%<br>" +
-    text +
-    "</div>"
-  );
+  return callback(`<div>Limited Time: Members Save 30%<br>${text}</div>`);
 };
 
 // CHANGE SOMETHING HERE TOO so that creates a link
-console.log(createCallToAction("Book now", createLink));
-
+console.log(createCallToAction("Book Now", createLink));
+console.log(createCallToAction("Book Now", createButton));
 // IGNORE THIS BELOW. It is for the tests.
 
 export { createCallToAction };
-*/

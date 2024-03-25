@@ -24,6 +24,13 @@ const capitalizeString = (str) => {
  */
 const capitalizeArray = (originalArray, callback) => {
   // WRITE YOUR ANSWER IN HERE
+  let result = [];
+
+  for (let index of originalArray) {
+    let capitalizedStr = callback(index);
+    result.push(capitalizedStr);
+  }
+  return result;
 };
 
 // Uncomment me to test your answer in Quokka
