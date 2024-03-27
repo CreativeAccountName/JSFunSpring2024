@@ -18,7 +18,7 @@ const isNumberTwoDigits = (num) => {
  * It should return the first number where the callback returns true.
  *
  * Here is what you need to do:
- * - Right a loop that loops through each number in "arrayOfNum".
+ * - Write a loop that loops through each number in "arrayOfNum".
  * - Apply a callback on each number and store the result in a variable.
  * - If the result is true, return it. Otherwise, continue on the next number.
  *
@@ -41,15 +41,20 @@ const isNumberTwoDigits = (num) => {
  */
 
 const findFirst = (arrayOfNum, callback) => {
-  // WRITE YOUR ANSWER IN HERE
-  return callback(/* ... */);
+  for (const index of arrayOfNum) {
+    let isTrue = callback(arrayOfNum[index]);
+    if (isTrue) {
+      return arrayOfNum[index];
+    }
+  }
+
+  return callback(arrayOfNum);
 };
 
 /**
- * Uncomment me to test your answer in Quokka
- * console.log( findFirst([1, 3, 7, 8, 20], isNumberEven) )
- * console.log( findFirst([4, 500, 30, 2], isNumberTwoDigits) )
- */
+ * Uncomment me to test your answer in Quokka */
+console.log(findFirst([1, 3, 7, 8, 20], isNumberEven));
+console.log(findFirst([4, 500, 30, 2], isNumberTwoDigits));
 
 // DO NOT DELETE BELOW. It is for the tests.
 

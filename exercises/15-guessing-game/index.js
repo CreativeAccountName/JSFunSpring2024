@@ -1,19 +1,20 @@
 // Importing the readlineSync module and setting a boolean value to true which will keep the game running until the player chooses to stop.
 import prompt from "readline-sync";
 
-// Greets the user.
+// Greets the user and explains the game.
 console.log(
   `\n========================================\nWelcome to the Guessing Game!\nPress ctrl+c to stop at any time to quit.\n========================================\nInstructions: A random whole number between 1 - 10 will be generated, and your task is to guess the hidden value without running out of tries.\n========================================\n`
 );
 
-// Creates a random integer between 1 and 10. The minimum
+// Creates a random integer between 1 and 10. Function parameters are run through rounding parameters.
+// This is future-proofing in case numRand is called in the future with alternate values or accepts user input.
 const numRand = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-// Checks to make sure user answer is an integer within the given range. If it is, then it compares the secret number with the player's response.
+// Checks to make sure user answer is an integer within the given range. If it is, then it's compared to the secret number with the player's response.
 const numCheck = (sNum, pAns) => {
   if (!isNaN(pAns)) {
     if (pAns >= 1 && pAns <= 10) {
