@@ -34,8 +34,8 @@ const capitalizeArray = (originalArray, callback) => {
 };
 
 // Uncomment me to test your answer in Quokka
-// const result = capitalizeArray(['hello', 'world'], capitalizeString);
-
+const result = capitalizeArray(['hello', 'world'], capitalizeString);
+console.log(result);
 // IGNORE THIS BELOW. It is for the tests.
 
 export { capitalizeArray };

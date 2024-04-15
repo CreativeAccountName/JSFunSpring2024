@@ -9,3 +9,8 @@ const numbers = [1, 10, -2, 3, 4]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const findLow = (numVal) => {if (lowestNumber > numVal) {return lowestNumber = numVal;}};
+numbers.forEach(findLow);
+
+//Same thing as an anonymous function
+/*  numbers.forEach((numVal) => {if (lowestNumber > numVal) {return lowestNumber = numVal;}});  */

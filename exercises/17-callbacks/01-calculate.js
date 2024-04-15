@@ -43,8 +43,8 @@ const calculate = (num1, num2, callback) => {
 };
 
 // Uncomment me to test in Quokka
-// console.log( calculate(5, 10, add) );
-// console.log( calculate(7, 3, subtract) );
+console.log( calculate(5, 10, add) );
+console.log( calculate(7, 3, subtract) );
 
 // IGNORE THIS BELOW. It is for the tests.
 

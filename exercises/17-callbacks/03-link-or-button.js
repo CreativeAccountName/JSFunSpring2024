@@ -21,6 +21,20 @@ const createButton = (text) => {
 const createCallToAction = (text, callback) => {
   // CHANGE SOMETHING INSIDE THIS FUNCTION
 
+
+  
+  return `<div>Limited Time: Members Save 30%<br>${callback(text)}</div>`;
+};
+
+// CHANGE SOMETHING HERE TOO so that creates a link
+console.log(createCallToAction("Book Now", createLink));
+console.log(createCallToAction("Book Now", createButton));
+
+// IGNORE THIS BELOW. It is for the tests.
+
+export { createCallToAction };
+
+
   // return callback(`<div>Limited Time: Members Save 30%<br>${text}</div>`); // My original answer. Seemed to work, but was failing nonetheless.
   // return callback(`<div>${callback(`Limited Time: Members Save 30%<br>${text}`)}</div>`);
 
@@ -35,16 +49,4 @@ const createCallToAction = (text, callback) => {
   // I saw that the <div> element was not meant to be inside the link or button. In fact,
   // the callback couldn't include anything *but* the text argument, and the 'Limited Time' section had to be in the div *but*
   // the callback function with the text had to be within the link or button for the desired formatting.
-  // I was confused by the formatting requirement, is all. Must've forgotten the rules with elements within interactive elements.
-  // Particularly the rule about not using divs for that.
-
-  return `<div>Limited Time: Members Save 30%<br>${callback(text)}</div>`;
-};
-
-// CHANGE SOMETHING HERE TOO so that creates a link
-console.log(createCallToAction("Book Now", createLink));
-console.log(createCallToAction("Book Now", createButton));
-
-// IGNORE THIS BELOW. It is for the tests.
-
-export { createCallToAction };
+  // I was confused by the formatting requirement, is all. I must've forgotten the rules regarding static elements within interactive elements.

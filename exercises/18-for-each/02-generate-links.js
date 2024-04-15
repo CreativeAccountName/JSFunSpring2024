@@ -24,3 +24,11 @@ const links = [
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+// Used to have a return for the function, but it turned out unnecessary.
+const buildLink = (url, i) => {htmlStr += `<a href="${url}">${i + 1}. ${url}</a>`;};
+links.forEach(buildLink);
+
+/* //Same thing as an anonymous function
+links.forEach((url, i) => {htmlStr += `<a href="${url}">${i + 1}. ${url}</a>`;});
+*/
