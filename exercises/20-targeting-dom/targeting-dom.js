@@ -11,5 +11,26 @@
  * Do not change the HTML unless you are instructed to do so.
  */
 (function () {
-  // Put your answers in here
+
+  // Single elements
+  let listItem = document.querySelector("li");
+  console.log(listItem);
+
+  let myIdItem = document.querySelector("#myId");
+  console.log(myIdItem);
+
+  // Groups of elements
+ let yellowTarget = document.querySelectorAll(".bg-warning");
+ console.log(yellowTarget);
+
+  // Structuring HTML for JS
+  let btnTarget = document.querySelectorAll("#targetBtn");
+  console.log(btnTarget);
+
+  let aTag = document.querySelectorAll(".socMed");
+  console.log(aTag);
+
+  // Nested Elements. This targets both of the green cells individually instead of targeting the full row.
+  let greenTarget = document.querySelectorAll("div#myRow div.col");
+  console.log(greenTarget);
 })();
