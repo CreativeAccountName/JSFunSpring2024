@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>EXERCISES</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Sumana&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100vh;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+
+    <script src="form-inputs.js" defer></script>
+  </head>
+
+  <body class="d-flex flex-column">
+    <div class="container pt-4 pb-4">
+      <h1 class="h3">Signup for our Newsletter</h1>
+      <div class="row">
+        <form class="col-md-5 mb-3">
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" type="email" class="form-control" />
+
+            <!-- Show me if the email address is empty.
+              You can use the CSS property "display: block" to do this. -->
+            <div class="invalid-feedback">Please enter email address.</div>
+          </div>
+
+          <!-- Role or title-->
+          <div class="mb-3">
+            <label for="title" class="form-label"
+              >Title or Role <small>(Optional)</small></label
+            >
+            <select id="title" class="form-control">
+              <option value=""></option>
+              <option value="developer">Software Developer or Engineer</option>
+              <option value="devops">DevOps or Cloud Engineer</option>
+              <option value="architect">Software Architect</option>
+              <option value="ux">UX Designer</option>
+              <option value="product">Product Owner</option>
+              <option value="dataAnalyst">Data Analyst</option>
+              <option value="cybersecurity">Cybersecurity Professional</option>
+              <option value="manager">Engineering Manager or Leadership</option>
+              <option value="student">Student</option>
+              <option value="education">
+                Education Instructor or Administrator
+              </option>
+            </select>
+          </div>
+
+          <!-- Email promotions checkbox -->
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="shouldSendPromotions"
+            />
+            <label class="form-check-label" for="shouldSendPromotions">
+              Send promotional offers to my email address
+            </label>
+          </div>
+          <button class="btn btn-primary">Signup</button>
+        </form>
+
+        <div class="card bg-light col-md-4">
+          <div class="card-body">
+            <div class="mb-3">
+              Email:
+              <!-- Insert email address in this <span> here -->
+              <span></span>
+            </div>
+
+            <div class="mb-3">
+              Title or Role:
+              <!-- Insert title in this <span> here -->
+              <span></span>
+            </div>
+
+            <!-- This is hidden. Display this by removing the "hidden" class -->
+            <div class="hidden">✓ Include promotional offers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
