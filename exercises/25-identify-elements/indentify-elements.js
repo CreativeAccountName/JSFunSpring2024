@@ -15,5 +15,17 @@
    */
   // Write your answer here
 
-  
+  const selections = document.querySelectorAll(".button");
+
+  selections.forEach(selection => {
+selection.addEventListener("click", () =>{
+
+  document.querySelector("#notificationMessage").textContent = `Thank you for selecting the ${selection.id} plan!`;
+
+  document.querySelector("#notification").style.display = "block";
+    document.querySelector("#notification").style.backgroundColor = selection.style.backgroundColor; // not working?
+console.log("huh");
+});
+  });
+
 })();
