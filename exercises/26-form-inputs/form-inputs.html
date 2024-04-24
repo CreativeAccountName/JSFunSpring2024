@@ -84,7 +84,7 @@
               Send promotional offers to my email address
             </label>
           </div>
-          <button class="btn btn-primary">Signup</button>
+          <button id="signUp" class="btn btn-primary" disabled>Signup</button>
         </form>
 
         <div class="card bg-light col-md-4">
@@ -92,17 +92,17 @@
             <div class="mb-3">
               Email:
               <!-- Insert email address in this <span> here -->
-              <span></span>
+              <span id="displayEmail"></span>
             </div>
 
             <div class="mb-3">
               Title or Role:
               <!-- Insert title in this <span> here -->
-              <span></span>
+              <span id="titleSpan"></span>
             </div>
 
             <!-- This is hidden. Display this by removing the "hidden" class -->
-            <div class="hidden">✓ Include promotional offers</div>
+            <div id="promoInc" class="hidden">✓ Include promotional offers</div>
           </div>
         </div>
       </div>
