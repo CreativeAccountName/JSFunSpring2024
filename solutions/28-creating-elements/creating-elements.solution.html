@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXERCISES</title>
+    <!-- See https://tailwindcss.com/docs/installation -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="creating-elements.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <!-- I added an ID here -->
+      <div id="searchEngine" class="container mx-auto py-4">
+        <form class="w-full max-w-sm mb-4" id="handleThisForm">
+          <div class="flex items-center border-b border-teal-500 py-2">
+            <input
+              id="oceanInput"
+              type="search"
+              placeholder="Search for oceans near Albany, NY"
+              aria-label="Search for oceans near Albany, NY"
+              class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            />
+            <button
+              class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- Display "No results for ..." <div> here. -->
+      </div>
+    </section>
+
+    <section class="bg-slate-600 text-white">
+      <div class="container mx-auto">
+        <!-- I added an ID here -->
+        <div id="movie" class="grid grid-flow-col gap-4">
+          <!-- Add the movie HTML here -->
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <!-- I added an ID here -->
+      <div id="conversation" class="container mx-auto">
+        <!-- Add the ChatGPT HTML here -->
+      </div>
+    </section>
+  </body>
+</html>
