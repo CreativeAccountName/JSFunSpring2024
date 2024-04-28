@@ -24,7 +24,8 @@ selection.addEventListener("click", () =>{
 
   document.querySelector("#notification").style.display = "block";
     document.querySelector("#notification").style.backgroundColor = selection.style.backgroundColor; // not working?
-console.log("huh");
+
+    document.querySelector(".is-primary").style.backgroundColor = selection.style.backgroundColor;
 });
   });
 
