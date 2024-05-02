@@ -13,6 +13,7 @@
     "url": "git+https://github.com/AlbanyCanCodeCourses/JSFunSpring2024#readme"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "chai": "^5.0.3",
     "mocha": "^10.3.0",
     "sinon": "^17.0.1"
