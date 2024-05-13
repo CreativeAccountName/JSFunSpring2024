@@ -1,4 +1,5 @@
 # Added
+dist-no-legacy/
 *NOCOMMIT*
 # Usually, you would commit this, but I am ignoring this for class.
 package-lock.json

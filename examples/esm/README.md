@@ -59,3 +59,40 @@ You will need to start a web server in order for ESM to work. One simple way to 
 Alternatively, you can install the server [Vercel's "serve"](https://www.npmjs.com/package/serve) with Node.js.
 
 While LiveServer and Vercel's "serve" are very easy to use, they are really only suitable for developing very small static websites. Most JavaScript developers need much more from their tooling. Popular options are [Webpack](https://webpack.js.org/) and [Vite.js](https://vitejs.dev/). See the other examples for more on tooling.
+
+## Using NPM
+
+It is possible to use NPM in the browser with ESM, but keep in mind that not a lot of third-party libraries are set up to do this. Let's try using Axios. First, create a _package.json_ file with this command.
+
+```shell
+npm init -y
+```
+
+Then, add this to your _package.json_ file. It can go anywhere between the opening and closing `{ }`.
+
+```json
+// package.json
+{
+  // ...
+  "type": "module"
+  // ...
+}
+```
+
+Next, install Axios:
+
+```shell
+npm install axios
+```
+
+Now, let's add Axios to your code. I had search inside of the "node_modules" folder and find an entry point for axios. Finally, this worked for me:
+
+```js
+// main.js
+import axios from "./node_modules/axios/dist/esm/axios.min.js";
+
+const response = await axios.get("https://dog.ceo/api/breeds/image/random");
+console.log(response);
+```
+
+Many library maintainers do not expect you to use their libraries in the browser without bundlers like [Webpack](https://webpack.js.org/) and [Vite.js](https://vitejs.dev/). For this reason, it is often undocumented, if even supported at all.

@@ -1,0 +1,6 @@
+/* Code to include Tailwind styles and classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... Other global CSS code .. */

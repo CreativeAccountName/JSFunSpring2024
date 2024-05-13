@@ -40,9 +40,9 @@ You must meet these requirements in order to pass.
 
 Here are three ways you can structure your project into different files:
 
-1. Loading files with `<script>` (the oldest and simplest way)
-2. Using ESM modules with a bundler
-3. [Using ESM modules with the `<script>` tag](examples/esm/README.md)
+1. Load files with `<script>` (the oldest and simplest way)
+2. Use ESM modules with a bundler
+3. [Use ESM modules with the `<script>` tag](../../examples/esm/README.md)
 
 You can put your code in file(s) external to the HTML that are loaded with `<script>` tags, like this:
 
@@ -92,7 +92,7 @@ You can share code between JavaScript files by attaching your code to the window
 })();
 ```
 
-Alternatively, you can use ES6 modules with a bundlers like [Vite](https://vitejs.dev/), [Webpack](https://webpack.js.org/), or [Parcel.js](https://parceljs.org/). With bundlers, you can install JavaScript libraries like Axios with NPM. If you're goal is to be a JavaScript developer, using these tools will make a better portfolio piece. However, they can take considerably more time to get started. If you want to use bundlers, please be realistic with how much time you have to complete the project.
+Alternatively, you can use ES6 modules with a bundlers like [Vite](https://vitejs.dev/), [Webpack](https://webpack.js.org/), or [Parcel.js](https://parceljs.org/). With bundlers, you can install JavaScript libraries like Axios with NPM. If you're goal is to be a JavaScript developer, using these tools will make a better portfolio piece. However, they can take considerably more time to get started and host your project. If you want to use bundlers, please be realistic with how much time you have to complete the project. Start with hosting your project first so that your not surprised how long it takes to host a demo of your project at the last minute.
 
 ## Using APIs
 
@@ -257,21 +257,32 @@ https://github.com/othneildrew/Best-README-Template
 
 You can generate _.gitignore_ file with [gitignore.io](https://www.toptal.com/developers/gitignore). If you have a _node_modules_ folder, be sure to include it in your _.gitignore_.
 
-In addition to submitting code, you will need to submit a hosted version of your project. An easy way to do this is to publish your project with Github pages. Here are the steps:
+In addition to submitting code, you will need to submit a hosted version of your project. An easy way to do this is to publish your project with Github pages. Here are the steps for most projects. (If you installed libraries with NPM or a bundler, see below.)
 
 1. Open you Github repository e.g. https://github.com/my-github-username/final-project for your project in a web browser.
-2. Click on the "Settings" tab below the "Unwatch", "Star", and "Fork" buttons.
+2. Click on the "Settings" tab in the same toolbar that has "Code", "Issues", and "Pull Request". It should be on the right.
 3. In the sidebar, click on "Pages".
-4. Underneath where it says "Source", click on the "Branch" dropdown and select "main".
-5. Hit the "Save" button.
-6. You will see the URL for your published project (e.g. https://my-github-username.github.io/final-project), but it may take up to 15 minutes before the link works. If you click on the link and click a page not found error, you can try opening it an Incognito window or another browser.
+4. Make sure that "Deploy from a branch" underneath "Source" is selected.
+5. Underneath where it says "Branch", click on the dropdown that says "None" and select "main".
+6. Make sure the second dropdown says "/ (root)".
+7. Hit the "Save" button.
+8. The next part make take a few minutes. Refresh the page every 20 seconds or so. should will see the URL for your published project (e.g. https://my-github-username.github.io/final-project). If you click on the link and click a page not found error, you can try opening it an Incognito window or another browser.
+
+![A screenshot of what the setting for Github pages should look like](github-pages.png)
 
 In the future, if you want to deploy any changes to your website:
 
 1. Commit all of your changes
 2. Run `git push origin main`
 
-Then it should take a little a minute for the changes to go into effect.
+Then it should take a minute for the changes to go into effect.
+
+If you decided to use a bundler or NPM, its a bit more complicated:
+
+- [Vite with Github Actions](https://vitejs.dev/guide/static-deploy#github-pages) (or see [our Vite.js tutorial](../../examples/vite/README.md#deploying))
+- [Webpack deploy script](https://github.com/turingschool-examples/webpack-starter-kit/blob/main/gh-pages-procedure.md)
+- [Parcel.js deploy script](https://gist.github.com/OleksiyRudenko/7e94aa2d18927e0c5e65b2b5a1c0e375)
+- [NPM with Github Actions](https://github.com/marketplace/actions/deploy-to-github-pages)
 
 ## Project Design
 

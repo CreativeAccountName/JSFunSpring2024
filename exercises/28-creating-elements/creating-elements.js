@@ -108,7 +108,7 @@
    * HTML from the ChatGPT conversation on to the page.
    * See the comments in the HTML for where to add it.
    *
-   * When this is completed, your HTML should looks like"
+   * When this is completed, your HTML should looks like:
    * @example
      <div class="border-solid border-2 border-slate-200 rounded p-2 mb-4">
       <div class="font-bold">You</div>

@@ -112,7 +112,7 @@
    * HTML from the ChatGPT conversation on to the page.
    * See the comments in the HTML for where to add it.
    *
-   * When this is completed, your HTML should looks like"
+   * When this is completed, your HTML should looks like:
    * @example
      <div class="border-solid border-2 border-slate-200 rounded p-2 mb-4">
       <div class="font-bold">You</div>
@@ -125,8 +125,18 @@
   const conversation = document.querySelector("#conversation");
 
   /**
-   * Alternatively, I can use a for or a for ... of loop here
-   * @example for (let dialogue of conversationDialogues) {
+   * Alternatively, I can use a for loop ...
+   * @example
+   * for (let i = 0; i < conversationDialogues.length; i++) {
+   *   const dialogue = conversationDialogues[i];
+   *   // the rest of the code is the same
+   * }
+   *
+   * ... or a for ... of loop here
+   * @example
+   * for (let dialogue of conversationDialogues) {
+   *   // the rest of the code is the same
+   * }
    */
   conversationDialogues.forEach((dialogue) => {
     let conversationHtml = `<div class="border-solid border-2 border-slate-200 rounded p-2 mb-4">
