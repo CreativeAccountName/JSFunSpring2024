@@ -17,10 +17,12 @@
 	 *
 	 * You must make two AJAX request to solve this problem.
 	 */
+
 	// Targeting Dom elements so they can be changed based on user selection
 	const body = document.querySelector("body");
 	const dropDown = document.querySelector("#dropdown");
 	const titleHead = document.querySelector("#title-head");
+	const imgCaption = document.querySelector("#photo-caption");
 	const mainImg = document.querySelector("#get-schwifty");
 	const wikiLink = document.querySelector("#main-img a");
 	// const photoCaption = document.querySelector("#photo-caption");
@@ -28,75 +30,84 @@
 	let pageData = {};
 	let charLinks = [];
 
-	const getInfo = async () => {
+	// Get pageData info.
+	const getInfo = async (pData) => {
 		try {
 			let response = await axios.get("https://rickandmortyapi.com/api/character");
-			pageData = response.data.info;
+			pData.info = response.data.info;
+			console.log(pData);
+			return pData;
 		} catch (err) {
 			body.innerHTML = `<p>An unexpected error has occurred: ${err}</p>`;
 		}
+	};
+	getInfo(pageData);
+	console.log(pageData);
 
-		let maxLinks = pageData.count;
+	// Populate charLinks with an array of numbers.
+	const getLinkNums = (links, pData) => {
+		let maxLinks = pData.count;
 		let linkNum = 1;
 		while (linkNum <= maxLinks) {
-			charLinks.push(`${linkNum}`);
+			links.push(linkNum);
 			linkNum++;
 		}
-			return charLinks;
+		return links;
 	};
-	getInfo();
-console.log(charLinks);
-		console.log(`${charLinks[0]}`);
-	// console.log(`pageData.info: ${pageData.info.next}`);
+	getLinkNums(charLinks, pageData);
 
-	// Setting up async function that requests data from an API source. If that's successful, the charList array is populated with the data necessary to perform future tasks, and then the #dropdown input is populated with new options.
-	const getChar = async () => {
+	console.log(charLinks);
+
+	// Populates charList with character data.
+	const getChar = async (list, links) => {
 		try {
-			for (let link of charLinks) {
-				let targetUrl = charLinks[3];
-				console.log(targetUrl);
-				let response = await axios.get(`https://rickandmortyapi.com/api/character${link}`);
+			for (let link of links) {
+				let response = await axios.get(`https://rickandmortyapi.com/api/character/${link}`);
 				let result = response.data;
 
 				let listName = result.data.name;
 				let linkName = listName.replace(/ /g, "_");
 				let char = { id: `${result.data.id}`, name: `${listName}`, image: `${result.data.image}`, url: `http://rickandmorty.wikia.com/wiki/${linkName}` };
-				console.log(char);
-				charList.push(char);
+				list.push(char);
+				console.log("char: " + char);
 			}
 
-			for (let index of charList) {
-				let newOpt = document.createElement("option");
-				newOpt.id = charList[index].id;
-				newOpt.textContent += charList[index].name;
-				dropDown.appendChild(newOpt);
-			}
-
-			return charList;
+			return list;
 		} catch (err) {
-			body.innerHTML = `<p>An unexpected error has occurred: ${err}</p>`; // Placeholder error
+			body.innerHTML = `<p>An unexpected error has occurred: ${err}</p>`;
 		}
-
-
 	};
-	getChar();
+	getChar(charList, charLinks);
 
+	// Creates dropDown options.
+	const addOptions = (list) => {
+		for (let index of list) {
+			let newOpt = document.createElement("option");
+			newOpt.id = list[index].id;
+			newOpt.textContent += list[index].name;
+			dropDown.appendChild(newOpt);
+		}
+	};
+	addOptions(charList);
+
+	// Changes the page when the user makes a change to the dropDown selector.
 	dropDown.addEventListener("change", async () => {
-		// Normalizes ids
+		let listIndex = dropDown.selectedIndex;
+
+		/* 		// Normalizes ids
 		let dropIndex = dropDown.selectedIndex;
 		let listIndex = dropIndex - 1;
 		// addresses type error
 		if (dropIndex <= -1 || listIndex <= -1) {
 			dropIndex = 0;
 			listIndex = 0;
-		}
+		} */
 
-		console.log("dropIndex: " + dropIndex);
+		//console.log("dropIndex: " + dropIndex);
 		console.log("charList[listIndex].id: " + charList[listIndex].id);
 		titleHead.textContent = charList[listIndex].name;
 		mainImg.src = charList[listIndex].image;
+		imgCaption.innerHTML = `<em>${titleHead.textContent}</em>`;
 		wikiLink.href = charList[listIndex].url;
 	});
-
-
 })();
